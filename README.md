@@ -135,3 +135,7 @@ Exports do cliente: `useBaralho`, `openTarot` e `closeTarot`. `openTarot(spreadI
 Exports do servidor: `canPlayerUseTarot(source)`, `isPlayerAdmin(source)` e `getPlayerBaralhoCount(source)`. Eles permitem que outros recursos consultem as mesmas regras de acesso.
 
 As leituras são geradas na interface do jogador. As sessões entre dois jogadores mantêm o par em memória e encaminham as ações da NUI; não há banco de dados nem histórico persistente neste recurso.
+
+## Licença
+
+Este projeto é distribuído sob a licença MIT. Consulte [LICENSE](LICENSE) para os termos completos.
