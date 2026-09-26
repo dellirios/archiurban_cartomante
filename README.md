@@ -2,6 +2,12 @@
 
 Recurso de Tarô para servidores FiveM. Oferece leituras individuais e sessões entre dois jogadores, com interface NUI, 78 cartas ilustradas, significados em português, som ao virar cartas e personalização de cores.
 
+## Demonstração em vídeo
+
+[![Assista à demonstração do ArchiUrban Cartomante](https://i.ytimg.com/vi/CDezkgfUemE/hqdefault.jpg)](https://youtu.be/CDezkgfUemE)
+
+[Assistir à demonstração no YouTube](https://youtu.be/CDezkgfUemE).
+
 ## Funcionalidades
 
 - Leitura individual pelo item `baralho` ou pelos comandos `/cartas`, `/cartomante` e `/tarot`.
