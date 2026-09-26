@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+:root {
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: normal;
+  color: rgba(244, 244, 248, 0.94);
+
+  /* ArchiUrban Mystic Glass Palette */
+  --ui-charcoal: rgba(22, 18, 32, 0.55);
+  --ui-charcoal-strong: rgba(20, 15, 30, 0.78);
+  --ui-charcoal-deep: rgba(15, 10, 24, 0.88);
+  --ui-glass-light: rgba(255, 255, 255, 0.08);
+  
+  --ui-border: rgba(226, 210, 255, 0.18);
+  --ui-border-soft: rgba(255, 255, 255, 0.10);
+  --ui-border-glow: rgba(168, 85, 247, 0.45);
+
+  --ui-text: rgba(244, 244, 248, 0.96);
+  --ui-text-muted: rgba(244, 244, 248, 0.64);
+  
+  --ui-purple: #6b21a8;
+  --ui-violet: #9333ea;
+  --ui-violet-light: #a855f7;
+  --ui-violet-glow: rgba(147, 51, 234, 0.28);
+  --ui-gold: #fbbf24;
+  --ui-gold-soft: rgba(251, 191, 36, 0.25);
+
+  /* Dynamic Theme Overrides (Default: Dourado Alquímico) */
+  --theme-primary: #f59e0b;
+  --theme-secondary: #fbbf24;
+  --theme-glow: rgba(245, 158, 11, 0.35);
+  --theme-card-border: rgba(245, 158, 11, 0.40);
+  --theme-card-bg: rgba(14, 8, 24, 0.85);
+  --theme-text-title: #fef08a;
+  --theme-text-body: #f1f5f9;
+}
+
+/* CEF Transparency Enforcement */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: transparent !important;
+  background-color: transparent !important;
+  user-select: none;
+}
+
+body > div,
+#root > div {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Custom Mystical Typography */
+.font-mystic {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.05em;
+}
+
+.font-reading {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Glass Panels Ultra-Discretos (Sem BG pesado, CEF safe, sem blur externo alto) */
+.glass-panel-discrete {
+  border: 1px solid var(--theme-border, rgba(226, 210, 255, 0.14));
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      var(--theme-glow, rgba(147, 51, 234, 0.06)) 100%
+    ),
+    var(--theme-bg, rgba(14, 10, 22, 0.28));
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 var(--theme-glow, rgba(147, 51, 234, 0.15));
+}
+
+.glass-item {
+  border: 1px solid rgba(226, 210, 255, 0.10);
+  background: rgba(18, 14, 28, 0.25);
+  transition: all 0.2s ease;
+}
+
+.glass-item:hover {
+  border-color: var(--theme-secondary, rgba(168, 85, 247, 0.35));
+  background: rgba(35, 22, 54, 0.35);
+}
+
+.glass-panel-deep {
+  border: 1px solid rgba(226, 210, 255, 0.14);
+  background:
+    linear-gradient(
+      160deg,
+      rgba(35, 25, 52, 0.75) 0%,
+      rgba(18, 14, 28, 0.88) 100%
+    );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 24px rgba(147, 51, 234, 0.15);
+}
+
+/* Card 3D Flip Effects */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Mystical Card Borders */
+.card-frame {
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  box-shadow:
+    inset 0 0 12px rgba(251, 191, 36, 0.18),
+    0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+.card-frame-reversed {
+  border: 1px solid rgba(244, 63, 94, 0.45);
+  box-shadow:
+    inset 0 0 12px rgba(244, 63, 94, 0.20),
+    0 4px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(22, 18, 32, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(168, 85, 247, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(168, 85, 247, 0.65);
+}
+
+/* Keyframes for mystic pulsation */
+@keyframes mystic-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-mystic-pulse {
+  animation: mystic-pulse 4s ease-in-out infinite;
+}
